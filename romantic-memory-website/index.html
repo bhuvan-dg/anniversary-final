@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcomeScreen" class="welcome-overlay">
+      <div class="welcome-content">
+        <h1 id="typingText" class="fade-text">Our Memory Lane</h1>
+        <p id="subText" class="fade-text-sub">A special place for our story.</p>
+        <button class="btn-open" onclick="enterWebsite()">
+          See Our Story
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-fixed"></div>
+    <div class="star-overlay"></div>
+
+    <main id="mainContent" class="hidden-content">
+      <section class="hero active">
+        <div class="hero-content">
+          <h1>Us, in Time.</h1>
+          <p class="subtitle">
+            Every passing second is a chapter of our own.
+          </p>
+
+          <div class="timer-wrapper">
+            <div class="time-segment">
+              <span id="days">00</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="hours">00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="minutes">00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="seconds">00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+
+          <button
+            onclick="scrollToSection('playlist')"
+            class="scroll-indicator"
+            aria-label="Scroll Down"
+          >
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="playlist" class="section">
+        <div class="section-header reveal">
+          <h2>Our Favorite Songs</h2>
+          <p>Melodies that always bring you to mind</p>
+        </div>
+
+        <div class="track-list reveal">
+          <div
+            id="track-music1"
+            class="track-item"
+            onclick="playSong('music1')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>Yaar indha Saalai Oram</h3>
+              <p>Music 1</p>
+            </div>
+            <div class="track-duration">Our Song</div>
+          </div>
+
+          <div
+            id="track-music2"
+            class="track-item"
+            onclick="playSong('music2')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>Pookal Pookum tharnam</h3>
+              <p>Music 2</p>
+            </div>
+            <div class="track-duration">Our Song</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section">
+        <div class="section-header reveal">
+          <h2>A Message For You</h2>
+        </div>
+
+        <div class="message-box reveal">
+          <p class="anniversary-message">
+            Happy Anniversary my dear  Mahikutty ❤️
+          </p>
+          <p class="anniversary-message">
+            Nee vandhadhuku apram dhan en life konjam bright aachu 😎
+            <br>Ippo ellame un kitaye share panna thonudhu… because nee dhan en comfort person 🥺❤️
+            <br>Ennakana person neega mattum dhan mahadiya chellakutty
+          </p>
+          <p class="anniversary-message">
+            Namma rendu perum baby madhiri pathukrom la adhu romba pudikum enaku 🤭
+            <br>Sanda potalum last la unna vittutu iruka matan na Evalo sanda vandhalum namale vandhu adha understand pannitu life long happy ha irukanum kovam lam irukalam ana adhu konja neram happy romba neram irukanum life long ungala nalla happy ha pathupen
+          </p>
+          <p class="anniversary-message">
+            Thanks for being with me  Mahikutty 💖
+            <br>Love you soo much mahadiya
+            <br>Unkitta andha spl ana feel yarukittym varadhu d adhu avalo spl d ennaku ne endhu d avalo happy ha pathupen ennoda mahadiya 🥰 love you d namaloda life nama alaga pathukalam Evalo stuggels vandhalum endha year mari Happy ha life long irukanum serigala irupom na pathupen ellame 🫂 ennoda Chella mahadiya neega ungaluku na iruken epome mahadiya na ungalukaga na anga iruken epome irupen ennoda mahadiya 🫂 love you mahadiya
+          </p>
+          <p class="anniversary-message">
+            Once again happy anniversary my dear mahikutty
+            <br>Love you
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header reveal">
+          <h2>Beautiful Moments</h2>
+        </div>
+        <div class="gallery-container reveal">
+          <div class="polaroid rotate-left">
+            <img
+              src="../photo1.jpeg"
+              alt="Photo 1"
+            />
+            <div class="caption">Us Together</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="../photo2.jpeg"
+              alt="Photo 2"
+            />
+            <div class="caption">Our Moments</div>
+          </div>
+          <div class="polaroid rotate-left">
+            <img
+              src="../photo3.jpeg"
+              alt="Photo 3"
+            />
+            <div class="caption">Forever Memories</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing-section reveal">
+        <div class="closing-content">
+          <h2 class="gradient-text-big">
+            Every memory of us<br />is kept right here,<br /><span
+              class="highlight-pink"
+              >forever</span
+            >
+          </h2>
+
+          <div class="glow-box">
+            <i
+              class="fas fa-heart heart-beat"
+              id="loveIcon"
+              onclick="createHeartShower()"
+            ></i>
+            <p>
+              Thank you for being part of my life. Every single second spent 
+              with you is a priceless gift.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with all my heart, for You.</p>
+      </footer>
+    </main>
+
+    <div class="music-floater" id="playerBar">
+      <div class="floater-info">
+        <div class="equalizer"><span></span><span></span><span></span></div>
+        <span id="currentSongTitle" class="song-title">Choose a song...</span>
+      </div>
+      <button
+        onclick="toggleMusic()"
+        class="btn-control"
+        aria-label="Play Music"
+      >
+        <i class="fas fa-play" id="mainPlayIcon"></i>
+      </button>
+    </div>
+
+    <audio id="myAudio" loop>
+      <source src="../music1.mpeg" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
